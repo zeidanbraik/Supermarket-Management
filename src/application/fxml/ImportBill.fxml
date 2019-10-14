@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ImportBillController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="800.0">
+         <children>
+            <DatePicker fx:id="billDate">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="تاريخ الفاتورة">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="distPhone">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="رقم الجوال">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="distName">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="اسم الموزع">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="table" layoutY="80.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="399.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="barcodeColumn" prefWidth="142.0" text="بار كود" />
+          <TableColumn fx:id="itemColumn" prefWidth="168.0" text="السلعة" />
+            <TableColumn fx:id="quantityColumn" prefWidth="57.0" text="الكمية" />
+            <TableColumn fx:id="buyPriceColumn" prefWidth="107.0" text="سعر شراء الوحدة" />
+            <TableColumn fx:id="sellPriceColumn" prefWidth="107.0" text="سعر بيع الوحدة" />
+            <TableColumn fx:id="TotalBuyPriceColumn" prefWidth="108.0" text="اجمالي سعر الشراء" />
+            <TableColumn fx:id="TotalSellPriceColumn" prefWidth="110.0" text="اجمالي سعر البيع" />
+        </columns>
+      </TableView>
+      <Label fx:id="collectTotalBuyPriceLabel" alignment="CENTER" cache="true" layoutX="113.0" layoutY="479.0" prefHeight="47.0" prefWidth="85.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="collectTotalSellPriceLabel" alignment="CENTER" layoutX="14.0" layoutY="479.0" prefHeight="47.0" prefWidth="85.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="saveButton" layoutX="683.0" layoutY="483.0" mnemonicParsing="false" onAction="#buttonHandler" styleClass="main" stylesheets="@../style.css" text="حفظ الفاتورة" />
+      <Button fx:id="cancelButton" layoutX="558.0" layoutY="483.0" mnemonicParsing="false" onAction="#buttonHandler" styleClass="main" stylesheets="@../style.css" text="الغاء الفاتورة" />
+      <Label layoutX="414.0" layoutY="493.0" style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="بار كود" />
+      <TextField fx:id="barcodeReader" layoutX="251.0" layoutY="491.0" onKeyPressed="#barcodeHandler" />
+   </children>
+</AnchorPane>

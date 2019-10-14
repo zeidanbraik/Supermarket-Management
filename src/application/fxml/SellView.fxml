@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SellViewController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutY="14.0" prefHeight="58.0" prefWidth="800.0">
+         <children>
+            <TextField fx:id="itemNameTF" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#itemHandler">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin></TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="اسم السلعة">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="150.0" top="20.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="barcodeTF" onKeyPressed="#itemHandler">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin></TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="بار كود">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin></Label>
+         </children>
+         <padding>
+            <Insets right="50.0" />
+         </padding></HBox>
+      <TableView fx:id="tableView" layoutY="79.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="372.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="barcodeColumn" prefWidth="175.0" text="بار كود" />
+          <TableColumn fx:id="itemColumn" minWidth="1.0" prefWidth="256.0" text="اسم السلعة" />
+            <TableColumn fx:id="itemPriceColumn" prefWidth="94.0" text="سعر الوحدة" />
+            <TableColumn fx:id="quantityColumn" prefWidth="90.0" text="الكمية" />
+            <TableColumn fx:id="totalPriceColumn" prefWidth="184.0" text="السعر الكلي" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutY="451.0" prefHeight="81.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#buttonHandler" styleClass="main" stylesheets="@../style.css" text="الغاء الفاتورة">
+               <HBox.margin>
+                  <Insets left="20.0" right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="saveAndNewButton" mnemonicParsing="false" onAction="#buttonHandler" styleClass="main" stylesheets="@../style.css" text="حفظ وفتح فاتورة جديدة">
+               <HBox.margin>
+                  <Insets left="20.0" right="50.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="totalPriceTF" editable="false">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="السعر الكلي">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+.main{
+	-fx-background-color : #3F2B63;
+	-fx-background-radius: 0px;
+    -fx-text-fill        : #E1F5FE;
+    -fx-font-weight      : 900;
+    -fx-font-size: 16px;
+    
+    
+}
+
+.title{
+	 -fx-font-weight      : 900;
+    -fx-font-size: 16px;
+}
+
+.main:hover {
+    -fx-background-color : #2A1C42;
+    }
+
+.main:pressed {
+    -fx-background-color : #7156DD;
+    }
+
+.close{
+	-fx-background-color: transparent  ;
+}
+
+.close:hover{
+	-fx-background-color: rgb(230,230,230); 
+}
+
+.close:pressed{
+	-fx-background-color: rgb(192,192,192);
+}

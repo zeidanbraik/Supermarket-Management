@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.DailySalesController">
+   <children>
+      <TableView fx:id="table" layoutY="70.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="410.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="itemColumn" prefWidth="171.0" text="اسم السلعة" />
+          <TableColumn fx:id="quantityColumn" prefWidth="113.0" text="الكمية" />
+            <TableColumn fx:id="TotalSellPriceColumn" prefWidth="132.0" text="اجمالي سعر البيع" />
+            <TableColumn fx:id="profitColumn" prefWidth="158.0" text="الربح" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="date" layoutX="521.0" layoutY="25.0" />
+      <Label layoutX="716.0" layoutY="27.0" style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="التاريخ" />
+      <Label fx:id="totalSellPrice" alignment="CENTER" layoutX="390.0" layoutY="483.0" prefHeight="42.0" prefWidth="121.0" style="-fx-background-color: #7E7196;" text="-" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalProfit" alignment="CENTER" layoutX="236.0" layoutY="483.0" prefHeight="42.0" prefWidth="149.0" style="-fx-background-color: #7E7196;" text="-" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

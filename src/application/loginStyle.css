@@ -1,0 +1,38 @@
+
+.tf{
+     -fx-background-color : #9376AC;
+    -fx-background-insets: 0, 0 0 1 0 ; 
+    -fx-background-radius: 0 ; 
+   	-fx-font-weight: bold;
+   	 -fx-text-fill   : white ;
+   
+     
+}
+
+.title{
+	 -fx-text-fill   : #371356;
+    -fx-font-weight : bolder;
+    -fx-font-size   : 14px;
+	
+}
+
+.tf:focused {
+     -fx-background-color : #693C82;
+}
+
+.button{
+	-fx-background-color : #704C8F;
+    -fx-text-fill        : #E1F5FE;
+    -fx-font-weight      : 900;
+}
+
+.button:hover {
+    -fx-background-color : #4D1465;
+    }
+
+.button,.title,.tf{
+	-fx-pref-width: 300px ;
+	-fx-alignment: center ;
+	-fx-padding: 10px;
+	-fx-start-margin:10;	 
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ImportBillsController">
+   <children>
+      <TableView fx:id="table" layoutX="433.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="525.0" prefWidth="367.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="175.0" text="اسم الموزع" />
+          <TableColumn fx:id="dateColumn" prefWidth="191.0" text="تاريخ الفاتورة" />
+        </columns>
+      </TableView>
+      <GridPane alignment="CENTER" layoutX="66.0" layoutY="76.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="311.0" prefWidth="367.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="220.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="147.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="اسم المورد" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <TextField fx:id="nameTF" prefHeight="25.0" prefWidth="197.0">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="رقم جوال" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="phoneTF" prefHeight="25.0" prefWidth="197.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label style="-fx-font-weight: bolder; -fx-text-fill: #371356; -fx-font-size: 14px;" text="تاريخ الفاتورة" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="dateTF" prefHeight="25.0" prefWidth="197.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="viewBillButton" layoutX="170.0" layoutY="422.0" mnemonicParsing="false" onAction="#buttonHandler" styleClass="main" stylesheets="@../style.css" text="عرض الفاتورة" />
+   </children>
+</AnchorPane>
